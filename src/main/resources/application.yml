@@ -1,22 +1,21 @@
 spring:
-application.name: es-teacher-service
+  application.name: es-teacher-service
 
-jackson:
-  serialization.WRITE_DATES_AS_TIMESTAMPS: false
+  jackson:
+    serialization.WRITE_DATES_AS_TIMESTAMPS: false
 
-datasource:
-  url: jdbc:postgresql://localhost:5432/es_teacher
-  username: es_db_teacher
-  password: edusys2020
-  driver-class-name: org.postgresql.Driver
-  schema: classpath:/schema-postgres.sql
-  initialization-mode: always
-  platform: postgres
+  datasource:
+    url: jdbc:postgresql://edusystem-database-1.clmxt4f8zcur.us-west-2.rds.amazonaws.com:5432/es_teacher
+    username: edusystem
+    password: password
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: never
+    platform: postgres
 
-jpa:
-  properties:
-    hibernate:
-      dialect: org.hibernate.dialect.PostgreSQLDialect
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
   port: 8081
